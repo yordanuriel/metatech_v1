@@ -19,7 +19,7 @@ USE phone_shop;
 -- Clientes del negocio
 CREATE TABLE clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    documento VARCHAR(20) NOT NULL UNIQUE,
+    documento VARCHAR(20) UNIQUE,
     nombre VARCHAR(100) NOT NULL,
     telefono VARCHAR(20),
     direccion VARCHAR(255),
