@@ -333,7 +333,7 @@ CREATE TABLE devoluciones_servicio (
     orden_servicio_id INT NOT NULL,
     cliente_id INT NOT NULL,
     fecha DATE NOT NULL,
-    motivo TEXT NOT NULL,
+    motivo TEXT,
     tipo_resolucion ENUM('retrabajo', 'descuento_deuda', 'devolucion_dinero') NOT NULL,
     monto DECIMAL(12,2),
     nueva_orden_servicio_id INT,
