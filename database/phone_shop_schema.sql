@@ -364,9 +364,9 @@ CREATE TABLE reembolsos (
     observaciones TEXT,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_reembolsos_dev_venta FOREIGN KEY (devolucion_venta_id)
-        REFERENCES devoluciones_venta(id) ON UPDATE CASCADE ON DELETE RESTRICT,
+        REFERENCES devoluciones_venta(id),
     CONSTRAINT fk_reembolsos_dev_servicio FOREIGN KEY (devolucion_servicio_id)
-        REFERENCES devoluciones_servicio(id) ON UPDATE CASCADE ON DELETE RESTRICT,
+        REFERENCES devoluciones_servicio(id),
     CONSTRAINT fk_reembolsos_cuenta FOREIGN KEY (cuenta_bancaria_id)
         REFERENCES cuentas_bancarias(id) ON UPDATE CASCADE ON DELETE SET NULL,
     CONSTRAINT chk_reembolso_origen CHECK (
